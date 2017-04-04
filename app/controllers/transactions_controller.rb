@@ -10,19 +10,20 @@ class TransactionsController < ApplicationController
   
 # GET /transactions.json
   
-	def index   
-		custnumber = params[:temp_id]
-#		@transactions = Transaction.where(custref: custnumber)
-	end
+#	def index   
+#		@transactions = Transaction.all
+#	end
 
   
 # GET /transactions/1
  
 # GET /transactions.json
   
-	def indextran   
-		custnumber = params[:temp_id]
+	def index   
+		custnumber = params[:id]
+#		custnumber = 1
 		@transactions = Transaction.where(custref: custnumber)
+                @customer = Customer.find_by(custid: params[:id])  
 	end
 
    

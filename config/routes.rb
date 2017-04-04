@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
   
-	
-#        namespace :v1 do
 		resources :customers 
 		resources :transactions
 #               resources :customers, except: [:show]  
 		get '/splashpage/splashpage', to: 'splashpage#splashpage'
 		get '/customers/:temp_id', to: 'transactions#indextran'
- 								 
-#     end
+
+		namespace :api do
+			resources :transactions, only: [:index]
+			resources :balance, only: [:balance]
+		end 								 
 #  match 'v:api/*path', :to => redirect("/api/v2/%{path}")
 #  get '*path', :to => redirect("/v1/%{path}")
 end

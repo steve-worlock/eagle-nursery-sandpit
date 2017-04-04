@@ -1,0 +1,69 @@
+
+<p id="notice"><%= notice %></p>
+
+
+
+
+<h1>Eagle I Bank - Transactions for Cust ID  </h1>
+
+
+
+<% accountbalance = 0.0 %>
+
+
+<table>
+
+<thead>
+    
+<tr>
+      
+	<th>Custref</th>
+
+	<th>Tranref</th>
+      
+	<th>Trandate</th>
+      
+	<th>Tranamount</th>
+      
+	<th colspan="3"></th>
+
+</tr>
+  </thead>
+
+  
+<tbody>
+    
+<% @transactions.each do |transaction| %>
+
+<tr>
+        
+	<td><%= transaction.custref %></td>
+
+	<td><%= transaction.tranref %></td>
+
+	<td><%= transaction.trandate %></td>
+
+	<td><%= transaction.tranamount %></td>
+
+<!--	<td><%= link_to 'Show', transaction %></td>
+ -->
+<!--	<td><%= link_to 'Edit', edit_transaction_path(transaction) %></td> -->
+<!--	<td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ -->
+	<% accountbalance = accountbalance + transaction.tranamount %>
+</tr>
+    
+<% end %>
+  
+<tr>
+<td></td>
+<td></td>
+<td>Balance:</td>
+<td><%=accountbalance%>
+</tr> 
+</tbody>
+
+</table>
+
+<br>
+

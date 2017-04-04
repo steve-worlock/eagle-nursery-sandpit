@@ -2,4 +2,12 @@
 
 <p>Find me in app/views/splashpage/splashpage.html.erb</p>
 
-<p>Currently, this page is being redirected to the customer index page via the splashpage controller</>
+<p>Currently, this page is being redirected to the customer index page via the splashpage controller</p>
+<p>.erb stands for embedded Ruby. So you can embedd ruby here between <%   %> brackets. e.g. </p>
+<% sum=0 %>
+<% for  i in 1..5 %>
+<%= "#(i) " %>
+<% sum = sum + 1%>
+<% end %>
+<p>sum is: 
+<%= "#{sum}" %>

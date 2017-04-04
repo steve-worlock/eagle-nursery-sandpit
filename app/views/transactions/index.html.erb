@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Eagle I Bank - Transactions for Cust ID</h1>
+<%customer = @customer %>
+<h1>Eagle i-Bank - Transactions for Customer: <%= customer.custname %></h1>
 <% accountbalance = 0.0 %>
 
 
@@ -10,9 +10,8 @@
     
 <tr>
       
-	<th>Custref</th>
-
-	<th>Tranref</th>
+<!--	<th>Custref</th> -->   
+ 	<th>Tranref</th>
       
 	<th>Trandate</th>
       
@@ -27,11 +26,11 @@
   
 <tbody>
     
-<%@transaction.each do |transaction| %>
+<% @transactions.each do |transaction| %>
 <tr>
         
-	<td><%= transaction.custref %></td>
-
+<!--	<td><%= transaction.custref %></td>
+-->
 	<td><%= transaction.tranref %></td>
 
 	<td><%= transaction.trandate %></td>
@@ -52,7 +51,7 @@
 <td></td>
 <td></td>
 <td>Balance:</td>
-<td><%=accountbalance%>
+<td><%=accountbalance.to_d.truncate(2).to_f %>
 </tr> 
 </tbody>
 
@@ -60,3 +59,5 @@
 
 <br>
 
+
+<%= link_to 'Back', customers_path %>

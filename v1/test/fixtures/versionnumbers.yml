@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  apprelease: 1
+  contentrelease: 1
+  webappversion: 1
+  mobileappversion: 1
+
+two:
+  apprelease: 1
+  contentrelease: 1
+  webappversion: 1
+  mobileappversion: 1

@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 
-<h1>Eagle i Bank - Customer Administration</h1>
+<h1>Eagle i-Bank - Customer Administration</h1>
 
 
 
@@ -24,20 +24,20 @@
 
 <tbody>
     
+<% custid = 1 %>
 <% @customers.each do |customer| %>
 
-    <% temp_id = 0 %>
     <tr>
 
-    <td><%= customer.custid %></td>
+      <td><%= customer.custid %></td>
 
-    <td><%= customer.custname %></td><sp>
-    <td><%= link_to 'Show', customer %></td>
+      <td><%= customer.custname %></td><sp>
+      <td><%= link_to 'Show', customer %></td>
 
-    <td><%= link_to 'Show Transactions', {controller: "transactions", action: "indextran", temp_id: customer.custid} %></td> 
-
-</tr>
+      <td><%= link_to "Show Transactions", controller: "transactions", action: "index", id: custid %></td>
+    </tr>
     
+<%custid = custid+1%>
 <% end %>
   
 </tbody>
@@ -48,6 +48,7 @@
 <br>
 
 <%= link_to 'New Customer', new_customer_path %>
+
 
 <br />
 <br />
