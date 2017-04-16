@@ -1,0 +1,4 @@
+echo "errorlevel"
+echo %ERRORLEVEL%
+
+

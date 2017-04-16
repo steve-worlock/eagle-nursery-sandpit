@@ -1,10 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+
 one:
   custref: 1
   tranref: 1
   trandate: 2017-03-09
   tranamount: 1.5
+
 
 two:
   custref: 1
