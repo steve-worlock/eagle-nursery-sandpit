@@ -1,7 +1,5 @@
-cd c:\ror\eagleibank\app\models
-del transaction.rb 
-echo "2"
-copy transaction_brake_dep.rb transaction.rb
-echo "3"
-
-
+d c:\ror\eagleibank2\app\models
+del transaction.rb
+copy transaction_backup.rb transaction.rb
+cd c:\ror\eagleibank2
+echo "moel dependencies reestablished"
