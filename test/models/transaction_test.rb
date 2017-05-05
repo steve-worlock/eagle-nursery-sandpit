@@ -44,11 +44,11 @@ class TransactionTest < ActiveSupport::TestCase
 
 
 #DATA PRESENCE & UNIQUENESS POSITIVE TESTS
-	test "Test Transaction M6 - a complete record with unique custref/tranref combo and non-unique trandate & tranamount is saved" do
+#	test "Test Transaction M6 - a complete record with unique custref/tranref combo and non-unique trandate & tranamount is saved" do
  
-            transaction = Transaction.new(custref: 1, tranref: 87, trandate: "2017-03-02", tranamount: 90.56)		
-            assert transaction.save, "unique custref/tranref combo and non-unique trandate & tranamount not saved"
-	end
+#            transaction = Transaction.new(custref: 1, tranref: 87, trandate: "2017-03-02", tranamount: 90.56)		
+#            assert transaction.save, "unique custref/tranref combo and non-unique trandate & tranamount not saved"
+#	end
 
 
 end

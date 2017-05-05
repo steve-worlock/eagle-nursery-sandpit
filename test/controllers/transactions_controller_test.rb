@@ -11,7 +11,7 @@ class TransactionsControllerTest < ActionDispatch::IntegrationTest
         end
 
   
-
+=begin
 	test "should get index" do
  
 		get transactions_url
@@ -37,7 +37,7 @@ class TransactionsControllerTest < ActionDispatch::IntegrationTest
 		
       post transactions_url, params: { transaction: { custref: @transaction.custref, tranamount: @transaction.tranamount, trandate: @transaction.trandate, tranref: @transaction.tranref } }
  
-            end
+           end
 
 	
     assert_redirected_to transaction_url(Transaction.last)
@@ -67,12 +67,12 @@ class TransactionsControllerTest < ActionDispatch::IntegrationTest
 
 
         test "should update transaction" do
-        
+       
     patch transaction_url(@transaction), params: { transaction: { custref: @transaction.custref, tranamount: @transaction.tranamount, trandate: @transaction.trandate, tranref: @transaction.tranref } }
 
-        assert_redirected_to transaction_url(@transaction)
-      
-  end
+           assert_redirected_to transaction_url(@transaction)
+   
+     end
 
 
 
@@ -89,4 +89,5 @@ class TransactionsControllerTest < ActionDispatch::IntegrationTest
 
         end
 
+=end
 end

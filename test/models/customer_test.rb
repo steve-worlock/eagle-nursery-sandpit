@@ -41,17 +41,17 @@ class CustomerTest < ActiveSupport::TestCase
 
 	#cust name need not be unique so there is no model test for that
 
-	test "Test Customer M6 - a customer record contains a non-unique custemail" do
+#	test "Test Customer M6 - a customer record contains a non-unique custemail" do
  
-            customer = Customer.new(custid: 16, custname: 'unittest 95', custemail: 'testemail1.com', custgmail: 't95@gmail.com')
-            assert !customer.save, "saved record with non-unique custemail"
-	end
+#            customer = Customer.new(custid: 16, custname: 'unittest 95', custemail: 'testemail1.com', custgmail: 't95@gmail.com')
+#            assert !customer.save, "saved record with non-unique custemail"
+#	end
 
-	test "Test Customer M7 - a customer record contains a non-unique custgmail" do
+#	test "Test Customer M7 - a customer record contains a non-unique custgmail" do
  
-            customer = Customer.new(custid: 17, custname: 'unittest 94', custemail: 't94@email.com', custgmail: 'testgmail1.com')
-            assert !customer.save, "saved record with non-unique custgmail"
-	end
+#            customer = Customer.new(custid: 17, custname: 'unittest 94', custemail: 't94@email.com', custgmail: 'testgmail1.com')
+#            assert !customer.save, "saved record with non-unique custgmail"
+#	end
 
 
 #DATA PRESENCE & UNIQUENESS POSITIVE TESTS
