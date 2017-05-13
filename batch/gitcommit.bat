@@ -1,5 +1,6 @@
 REM Select the correct directory to issue rake command to re-instantiate databases
 REM .......
+cd c:/ror/eagleibank
 git remote -v
 git remote rm origin
 git remote -v
