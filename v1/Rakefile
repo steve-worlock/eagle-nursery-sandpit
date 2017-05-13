@@ -4,14 +4,3 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
-
-
-task 'db:schema:load' do
-   puts 'hello1'
-end
-task 'db:seed' do
-   puts 'hello2'
-end
-task 'test' do
-   puts 'hello3'
-end
